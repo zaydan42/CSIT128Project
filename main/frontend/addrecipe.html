@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YumShare: Add Recipe</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="styling.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="navigation">
+                <div class="items">
+                    <a href="index.html"><span class="page">Home</span></a>
+                    <a href="signuppage.html">
+                        <button class="button">
+                            <span class="button-3">Sign up</span>
+                        </button>
+                    </a>
+                </div>
+                <button class="site-name">YumShare</button>
+            </div>
+        </header>
+        <div class="main-content">
+            <aside class="sidebar-left"></aside>
+            <main class="content">
+                <div class="frame">
+                    <div class="copy">
+                        <span class="landing-page-title">Add a New Recipe</span>
+                        <form class="recipe-form" action="/addrecipe" method="post" enctype="multipart/form-data">
+                            <label for="title" class="subheading">Title:</label>
+                            <input type="text" id="title" name="title" placeholder="Recipe Title" required class="input-field">
+
+                            <label for="ingredients" class="subheading">Ingredients:</label>
+                            <textarea id="ingredients" name="ingredients" placeholder="List of ingredients" required class="input-field"></textarea>
+
+                            <label for="instructions" class="subheading">Instructions:</label>
+                            <textarea id="instructions" name="instructions" placeholder="Step-by-step instructions" required class="input-field"></textarea>
+
+                            <label for="image" class="subheading">Upload Image:</label>
+                            <input type="file" id="image" name="image" accept="image/*" required class="input-field">
+
+                            <button type="submit" class="button"><span class="button-3">Add Recipe</span></button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <aside class="sidebar-right"></aside>
+        </div>
+        <footer class="footer">Footer</footer>
+    </div>
+
+    <style>
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .recipe-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    </style>
+</body>
+</html>

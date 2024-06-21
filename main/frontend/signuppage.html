@@ -1,56 +1,72 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YumShare: Sign up</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" />
+    <title>YumShare: Sign Up</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="styling.css" />
-  </head>
-  <body>
+</head>
+<body>
     <div class="main-container">
-      <div class="signup">
-        <div class="modal">
-          <div class="text">
-            <span class="t-signup-title">Create new account</span>
-          </div>
-          <div class="container">
-            <div class="input">
-              <span class="span">Email</span>
-              <div class="input-1">
-                <div class="input-large">
-                  <span class="span-2">Enter your email</span>
-                </div>
-              </div>
+        <div class="navigation">
+            <div class="items">
+                <a href="homepage.html"><span class="page">Home</span></a>
+                <span class="page">Search</span>
+                <button onclick="openAdminPage()"><span class="page-1">Admin</span></button>
+                <span class="page-2">About us</span>
+                <a href="signuppage.html">
+                    <button class="button">
+                        <span class="button-3">Sign up</span>
+                    </button>
+                </a>
             </div>
-            <div class="input-3">
-              <span class="username-title">Username</span>
-              <div class="input-4">
-                <div class="input-large-5">
-                  <span class="username-placehold">Jasper Din</span>
-                </div>
-              </div>
-            </div>
-            <div class="input-6">
-              <span class="password-title">Password</span>
-              <div class="input-7">
-                <div class="input-large-8">
-                  <span class="text-9">••••••••••</span>
-                </div>
-              </div>
-              <div class="caption">
-                <div class="lock"><div class="icon"></div></div>
-                <span class="at-least-character">At least 8 character</span>
-              </div>
-            </div>
-          </div>
-          <div class="actions">
-            <button class="button">
-              <span class="continue">Continue</span></button
-            ><span class="signup-a">Already have an account? Login here.</span>
-          </div>
+            <button class="site-name">YumShare</button>
         </div>
-      </div>
+        <div class="form-container">
+            <!-- Signup Section -->
+            <div class="signup-section">
+                <h2 class="landing-page-title">Create an Account</h2>
+                <form class="frame" action="/signup" method="post">
+                    <div class="copy">
+                        <label for="email" class="subheading">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="email@domain.com" required class="input-field">
+
+                        <label for="first-name" class="subheading">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="James" required class="input-field">
+
+                        <label for="last-name" class="subheading">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Smith" required class="input-field">
+
+                        <label for="username" class="subheading">Username:</label>
+                        <input type="text" id="username" name="username" placeholder="Username" required class="input-field">
+
+                        <label for="password" class="subheading">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Password" required class="input-field">
+
+                        <button type="submit" class="button"><span class="button-3">Sign up</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </body>
+    <!-- Admin Page Modal -->
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAdminPage()">&times;</span>
+            <h2>Admin Login</h2>
+            <form class="frame" action="/admin/login" method="post">
+                <div class="copy">
+                    <label for="admin-username" class="subheading">Username:</label>
+                    <input type="text" id="admin-username" name="admin-username" placeholder="Username" required class="input-field">
+
+                    <label for="admin-password" class="subheading">Password:</label>
+                    <input type="password" id="admin-password" name="admin-password" placeholder="Password" required class="input-field">
+
+                    <button type="submit" class="button"><span class="button-3">Login</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
 </html>
