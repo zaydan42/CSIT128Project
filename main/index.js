@@ -90,7 +90,8 @@ app.post('/login', async (req, res) => {
 
     if (user && user.password === password) {
       req.session.userId = user.username;
-      res.status(200).send('Login successful');
+      // Redirect to add recipes page after successful login
+      res.redirect('/addrecipe.html');
     } else {
       res.status(401).send('Invalid username or password');
     }
@@ -98,6 +99,7 @@ app.post('/login', async (req, res) => {
     console.error(error);
     res.status(500).send('Error logging in');
   }
+  
 });
 
 // Serve the combined signup/login page
@@ -109,4 +111,11 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
+
+
+
+
+
 

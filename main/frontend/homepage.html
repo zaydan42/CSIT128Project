@@ -1,137 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YumShare: Home</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
     <link rel="stylesheet" href="styling.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header class="header">
-            <div class="navigation">
-                <div class="items">
-                    <a href="index.html"><span class="page">Home</span></a>
-                    <button><span class="page">Search</span></button>
-                    <button onclick="openAdminPage()"><span class="page-1">Admin</span></button>
-                    <a href="signuppage.html">
-                        <button class="button">
-                            <span class="button-3">Sign up</span>
-                        </button>
-                    </a>
-                </div>
-                <button class="site-name">YumShare</button>
-            </div>
-        </header>
-        <div class="main-content">
-            <aside class="sidebar-left"></aside>
-            <main class="content">
-                <div class="frame">
-                    <div class="copy">
-                        <span class="landing-page-title">Welcome to YumShare!</span>
-                        <span class="subheading">
-                            Your favorite recipe-sharing online platform to discover and
-                            share delicious recipes!
-                        </span>
-                        <a href="signuppage.html">
-                            <button class="button-4">
-                                <span class="button-5">Get Started</span>
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <div class="image-fill"></div>
-                <div class="heading">
-                    <span class="subheading-intro">Newly Added</span>
-                    <span class="cards">
-                        Check newly added recipes by members, add a recipe to be
-                        featured!
-                    </span>
-                </div>
-            </main>
-            <aside class="sidebar-right"></aside>
+      <header class="header">
+        <div class="navigation">
+          <div class="items">
+            <a href="index.html"><span class="page">Home</span></a>
+            <button><span class="page">Search</span></button>
+            <button onclick="openAdminPage()">
+              <span class="page-1">Admin</span>
+            </button>
+            <a href="signuppage.html">
+              <button class="button">
+                <span class="button-3">Sign up</span>
+              </button>
+            </a>
+          </div>
+          <button class="site-name">YumShare</button>
         </div>
-        <!-- Footer added -->
-        <footer class="footer">Footer</footer>
+      </header>
+      <div class="main-content">
+        <aside class="sidebar-left"></aside>
+        <main class="content">
+          <div class="frame">
+            <div class="copy">
+              <span class="landing-page-title">Welcome to YumShare!</span>
+              <span class="subheading">
+                Your favorite recipe-sharing online platform to discover and
+                share delicious recipes!
+              </span>
+              <a href="signuppage.html">
+                <button class="button-4">
+                  <span class="button-5">Get Started</span>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="image-fill"></div>
+          <div class="heading">
+            <span class="subheading-intro">Newly Added</span>
+            <span class="cards">
+              Check newly added recipes by members, add a recipe to be featured!
+            </span>
+          </div>
+        </main>
+        <aside class="sidebar-right"></aside>
+      </div>
+      <!-- Footer added -->
+      <footer class="footer">Footer</footer>
     </div>
 
     <!-- Admin Page Modal -->
     <div id="admin-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeAdminPage()">&times;</span>
-            <h2>Admin Login</h2>
-            <form class="frame" action="addrecipe.html" method="post">
-                <div class="copy">
-                    <label for="admin-username" class="subheading">Username:</label>
-                    <input type="text" id="admin-username" name="admin-username" placeholder="Username" required class="input-field">
+      <div class="modal-content">
+        <span class="close" onclick="closeAdminPage()">&times;</span>
+        <h2>Admin Login</h2>
+        <form class="frame" action="addrecipe.html" method="post">
+          <div class="copy">
+            <label for="admin-username" class="subheading">Username:</label>
+            <input
+              type="text"
+              id="admin-username"
+              name="admin-username"
+              placeholder="Username"
+              required
+              class="input-field"
+            />
 
-                    <label for="admin-password" class="subheading">Password:</label>
-                    <input type="password" id="admin-password" name="admin-password" placeholder="Password" required class="input-field">
+            <label for="admin-password" class="subheading">Password:</label>
+            <input
+              type="password"
+              id="admin-password"
+              name="admin-password"
+              placeholder="Password"
+              required
+              class="input-field"
+            />
 
-                    <button type="submit" class="button"><span class="button-3">Login</span></button>
-                </div>
-            </form>
-        </div>
+            <button type="submit" class="button">
+              <span class="button-3">Login</span>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script>
-        // Function to open the admin modal
-        function openAdminPage() {
-            document.getElementById('admin-modal').style.display = 'block';
-        }
+      // Function to open the admin modal
+      function openAdminPage() {
+        document.getElementById("admin-modal").style.display = "block";
+      }
 
-        // Function to close the admin modal
-        function closeAdminPage() {
-            document.getElementById('admin-modal').style.display = 'none';
-        }
+      // Function to close the admin modal
+      function closeAdminPage() {
+        document.getElementById("admin-modal").style.display = "none";
+      }
 
-        // Close the modal when clicking outside of it
-        window.onclick = function (event) {
-            const modal = document.getElementById('admin-modal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
+      // Close the modal when clicking outside of it
+      window.onclick = function (event) {
+        const modal = document.getElementById("admin-modal");
+        if (event.target == modal) {
+          modal.style.display = "none";
         }
+      };
     </script>
-
-    <style>
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.4);
-            padding-top: 60px;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-            .close:hover,
-            .close:focus {
-                color: black;
-                text-decoration: none;
-                cursor: pointer;
-            }
-    </style>
-</body>
+  </body>
 </html>
