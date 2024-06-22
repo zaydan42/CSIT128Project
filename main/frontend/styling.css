@@ -24,17 +24,35 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
 }
-nav ul li {
-  list-style: none;
-  display: inline;
-  margin-right: 20px;
-  font-weight: 500;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #4b4b4b;
 }
 .welcome {
   width: 100%;
   height: auto;
-  background: url(./360_F_332753934_tBacXEgxnVplFBRyKbCif49jh0Wz89ns.jpg);
+  background: url(images/360_F_332753934_tBacXEgxnVplFBRyKbCif49jh0Wz89ns.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -88,7 +106,7 @@ nav ul li {
   font-size: 40px;
   width: 100%;
   height: auto;
-  color: #ff6f61;
+  color: #000000;
   text-align: center;
   margin-top: 35px;
 }
@@ -98,6 +116,7 @@ nav ul li {
   align-items: center;
   width: 90%;
   margin: 65px auto;
+  text-decoration: none;
 }
 .heading-content {
   flex: 1;
@@ -143,7 +162,7 @@ nav ul li {
   font-size: 40px;
   width: 100%;
   height: auto;
-  color: #ff6f61;
+  color: #000000;
   text-align: center;
   margin: 35px;
   padding: 35px;
@@ -213,7 +232,7 @@ footer {
 }
 
 .close {
-  color: #aaa;
+  color: #000000;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -221,7 +240,7 @@ footer {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   cursor: pointer;
 }
@@ -237,6 +256,6 @@ footer {
 }
 
 .input-field:focus {
-  border-color: #ff6f61;
+  border-color: #000000;
   outline: none;
 }
