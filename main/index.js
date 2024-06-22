@@ -69,7 +69,8 @@ app.post('/signup', async (req, res) => {
       lname
     });
 
-    res.status(201).send('User created successfully');
+    // Redirect to homepage after successful signup
+    res.redirect('/homepage.html');
   } catch (error) {
     console.error(error);
     res.status(500).send('Error creating user');
