@@ -20,3 +20,10 @@ r_author VARCHAR(50),
 PRIMARY KEY(r_title, r_author),
 FOREIGN KEY(r_author) REFERENCES admin_login(username)
 );
+
+
+
+
+
+
+
