@@ -1,118 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YumShare: Home</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" /> 
     <link rel="stylesheet" href="styling.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header class="header">
-        <div class="navigation">
-          <div class="items">
-            <a href="index.html"><span class="page">Home</span></a>
-            <button><span class="page">Search</span></button>
-            <button onclick="openAdminPage()">
-              <span class="page-1">Admin</span>
-            </button>
-            <a href="signuppage.html">
-              <button class="button">
-                <span class="button-3">Sign up</span>
-              </button>
-            </a>
-          </div>
-          <button class="site-name">YumShare</button>
-        </div>
-      </header>
-      <div class="main-content">
-        <aside class="sidebar-left"></aside>
-        <main class="content">
-          <div class="frame">
-            <div class="copy">
-              <span class="landing-page-title">Welcome to YumShare!</span>
-              <span class="subheading">
-                Your favorite recipe-sharing online platform to discover and
-                share delicious recipes!
-              </span>
-              <a href="signuppage.html">
-                <button class="button-4">
-                  <span class="button-5">Get Started</span>
-                </button>
-              </a>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img  class="logo" alt="logo" src="YumShare!.png">
+            <nav>
+                <ul class="nav-list">
+                    <li> <a href="index.html"><span class="page">Home</span></a> </li>
+                    <li> <button onclick="openAdminPage()"><span class="page-1">Admin</span></button> </li>
+                    <li><a href="signuppage.html"><button class="button"> <span class="button-3">Sign up</span> </button></a></li>
+                </ul>
+            </nav>
+                </div>
+        </header>
+        <section class="welcome">
+            <div class="welcome-section">
+                <h2> Welcome to YumShare!</h2>
+                <p> Discover, share, and savor delicious recipes. </p>
+                <form action="#" class="search-box">
+                    <input type="text" placeholder="Search recipes">
+                    <button type="submit"> Search </button>
+                    </button>
+                </form>
             </div>
-          </div>
-          <div class="image-fill"></div>
-          <div class="heading">
-            <span class="subheading-intro">Newly Added</span>
-            <span class="cards">
-              Check newly added recipes by members, add a recipe to be featured!
-            </span>
-          </div>
-        </main>
-        <aside class="sidebar-right"></aside>
-      </div>
-      <!-- Footer added -->
-      <footer class="footer">Footer</footer>
-    </div>
+        </section>
+        <section class="About"> 
+        <div class="heading">
+            <h1> About us</h1>
+        </div>
+        <div class="container1">
+        <div class="heading-content">
+            <p> YumShare was founded by a group of passionate foodies who wanted to create a space where people could share their love for cooking and discover new flavors. We realized that food brings people together, and we wanted to harness that power to build a community of like-minded individuals who appreciate the joys of cooking and sharing meals.</p>
+        </div>
+        <div class="abtimg">
+            <img src="WhatsApp Image 2024-06-20 at 14.42.18.jpeg">
+        </div>
+        </div>
+        </section>
+<!-- Recipes section -->
+        <section class ="recipes">
+            <h1>Our Recipes </h1>
+            <div class="recipe-section">
+                <div class="recipe-card">
+                    <img src="grilled-fish-tacos-17.jpg" alt="GrilledFishTacos">
+                    <h2> Grilled Fish Tacos with Jalapeno Corn Slaw</h2>
+                    <p> Smoky, flavorful grilled fish is served on warm tortillas with a crisp and refreshing jalapeño slaw made with fresh corn. </p>
+                    <a href="#"> View recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="Cannoli-2.jpg.webp" alt="Cannoli">
+                    <h2> Cannoli </h2>
+                    <p> a crisp and flaky cannoli shell enclosing a lusciously creamy, sweet ricotta filling.  </p>
+                    <a href="#"> View recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="butter-chicken-4.jpg" alt="ButterChicken">
+                    <h2> Butter Chicken</h2>
+                    <p> curry dish made of chicken that’s coated in a well seasoned tomato gravy that includes butter and cream. </p>
+                    <a href="#"> View recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="knafeh-slice-scaled.jpg" alt="Knafeh">
+                    <h2> Knafeh</h2>
+                    <p> Middle Eastern dessert with layered crispy pastry and sweet cheese soaked in syrup. </p>
+                    <a href="#"> View recipe</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                <p>&copy; 2024 YumShare</p>
+            </div>
+        </footer>
 
     <!-- Admin Page Modal -->
     <div id="admin-modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeAdminPage()">&times;</span>
-        <h2>Admin Login</h2>
-        <form class="frame" action="addrecipe.html" method="post">
-          <div class="copy">
-            <label for="admin-username" class="subheading">Username:</label>
-            <input
-              type="text"
-              id="admin-username"
-              name="admin-username"
-              placeholder="Username"
-              required
-              class="input-field"
-            />
+        <div class="modal-content">
+            <span class="close" onclick="closeAdminPage()">&times;</span>
+            <h2>Admin Login</h2>
+            <form class="frame" action="addrecipe.html" method="post">
+                <div class="copy">
+                    <label for="admin-username" class="subheading">Username:</label>
+                    <input type="text" id="admin-username" name="admin-username" placeholder="Username" required class="input-field">
 
-            <label for="admin-password" class="subheading">Password:</label>
-            <input
-              type="password"
-              id="admin-password"
-              name="admin-password"
-              placeholder="Password"
-              required
-              class="input-field"
-            />
+                    <label for="admin-password" class="subheading">Password:</label>
+                    <input type="password" id="admin-password" name="admin-password" placeholder="Password" required class="input-field">
 
-            <button type="submit" class="button">
-              <span class="button-3">Login</span>
-            </button>
-          </div>
-        </form>
-      </div>
+                    <button type="submit" class="button"><span class="button-3">Login</span></button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
-      // Function to open the admin modal
-      function openAdminPage() {
-        document.getElementById("admin-modal").style.display = "block";
-      }
-
-      // Function to close the admin modal
-      function closeAdminPage() {
-        document.getElementById("admin-modal").style.display = "none";
-      }
-
-      // Close the modal when clicking outside of it
-      window.onclick = function (event) {
-        const modal = document.getElementById("admin-modal");
-        if (event.target == modal) {
-          modal.style.display = "none";
+        // Function to open the admin modal
+        function openAdminPage() {
+            document.getElementById('admin-modal').style.display = 'block';
         }
-      };
+
+        // Function to close the admin modal
+        function closeAdminPage() {
+            document.getElementById('admin-modal').style.display = 'none';
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function (event) {
+            const modal = document.getElementById('admin-modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
     </script>
-  </body>
+</body>
 </html>
