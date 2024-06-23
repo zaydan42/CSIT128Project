@@ -24,8 +24,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-decoration: none;
 }
+/* Navigation Styles */
 ul {
   list-style-type: none;
   margin: 0;
@@ -35,7 +35,7 @@ ul {
 }
 
 li {
-  float: right;
+  float: left;
 }
 
 li a {
@@ -63,7 +63,7 @@ li a:hover {
 }
 
 .welcome h2 {
-  font-size: 36px;
+  font-size: 50px;
   margin-bottom: 10px;
 }
 
@@ -78,19 +78,28 @@ li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #ffffff;
 }
 
 .search-box input {
-  width: 40%;
+  width: 70%;
   padding: 10px;
   outline: none;
-  border: #ffffff;
-  border-radius: 5px;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
 }
 
 .search-box button {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border: 0;
+  outline: none;
+  background: #ffffff;
+  font-size: 1rem;
+}
+.search-box button:hover {
+  background-color: #c9c3c3;
+  color: white;
 }
 .items {
   display: flex;
@@ -116,7 +125,6 @@ li a:hover {
   align-items: center;
   width: 90%;
   margin: 65px auto;
-  text-decoration: none;
 }
 .heading-content {
   flex: 1;
@@ -159,13 +167,12 @@ li a:hover {
 }
 
 .recipes h1 {
-  font-size: 40px;
+  font-size: 50px;
   width: 100%;
   height: auto;
   color: #000000;
   text-align: center;
-  margin: 35px;
-  padding: 35px;
+  margin-bottom: 35px;
 }
 
 .recipe-section {
@@ -176,19 +183,31 @@ li a:hover {
   column-gap: 10px;
 }
 .recipe-card {
-  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius: 8px;
+  background-color: white;
   margin: 30px 10px;
-  border-radius: 10px;
   border: 1px solid #ccc;
   overflow: hidden;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .recipe-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+}
+
+.recipe-card h2 {
+  font-size: 22px;
+  padding: 20px;
+}
+
+.recipe-card p {
+  font-size: 20px;
+  padding: 20px;
 }
 
 .recipe-card a {
@@ -196,7 +215,7 @@ li a:hover {
   text-align: center;
   text-decoration: none;
   background-color: #333;
-  color: #ffffff;
+  color: #fff;
   padding: 15px 0;
   cursor: pointer;
 }
@@ -205,6 +224,19 @@ footer {
   padding: 20px 0;
   color: #fff;
   text-align: center;
+}
+
+.button3 {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.button3:hover {
+  background-color: #4b4b4b;
 }
 
 /* Modal Styles */
@@ -225,14 +257,14 @@ footer {
   background-color: #fefefe;
   margin: 5% auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid #888888;
   width: 80%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .close {
-  color: #000000;
+  color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -240,7 +272,7 @@ footer {
 
 .close:hover,
 .close:focus {
-  color: rgb(0, 0, 0);
+  color: black;
   text-decoration: none;
   cursor: pointer;
 }
@@ -256,6 +288,6 @@ footer {
 }
 
 .input-field:focus {
-  border-color: #000000;
+  border-color: #ff6f61;
   outline: none;
 }
