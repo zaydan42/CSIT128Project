@@ -1,143 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YumShare: Home</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" /> 
     <link rel="stylesheet" href="styling.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div class="container">
-        <img class="logo" alt="logo" src="image/YumShare!.png" />
-        <nav>
-          <ul class="nav-list">
-            <li>
-              <a href="homepage.html"><span class="page">Home</span></a>
-            </li>
-            <li>
-              <a onclick="openAdminPage()"><span class="page-1">Admin</span></a>
-            </li>
-            <li>
-              <a href="authpage.html"
-                ><span class="button"
-                  ><span class="button-3">Sign up</span></span
-                ></a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <div class="container">
+            <img class="logo" alt="logo" src="image/YumShare!.png">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="homepage.html"><span class="page">Home</span></a></li>
+                    <li><a onclick="openAdminPage()"><span class="page-1">Admin</span></a></li>
+                    <li><a href="signuppage.html"><span class="button"><span class="button-3">Sign up</span></span></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <section class="welcome">
-      <div class="welcome-section">
-        <h2>Welcome to YumShare!</h2>
-        <p>Discover, share, and savor delicious recipes.</p>
-        <form action="#" class="search-box">
-          <input type="text" placeholder="Search recipes" />
-          <button type="submit">Search</button>
-        </form>
-      </div>
+        <div class="welcome-section">
+            <h2>Welcome to YumShare!</h2>
+            <p>Discover, share, and savor delicious recipes.</p>
+            <form action="#" class="search-box">
+                <input type="text" placeholder="Search recipes">
+                <button type="submit">Search</button>
+            </form>
+        </div>
     </section>
     <section class="About">
-      <div class="heading">
-        <h1>About Us</h1>
-      </div>
-      <div class="container1">
-        <div class="heading-content">
-          <p>
-            YumShare was founded by a group of passionate foodies who wanted to
-            create a space where people could share their love for cooking and
-            discover new flavors. We realized that food brings people together,
-            and we wanted to harness that power to build a community of
-            like-minded individuals who appreciate the joys of cooking and
-            sharing meals.
-          </p>
+        <div class="heading">
+            <h1>About Us</h1>
         </div>
-        <div class="abtimg">
-          <img src="images/WhatsApp Image 2024-06-20 at 14.42.18.jpeg" />
+        <div class="container1">
+            <div class="heading-content">
+                <p>YumShare was founded by a group of passionate foodies who wanted to create a space where people could share their love for cooking and discover new flavors. We realized that food brings people together, and we wanted to harness that power to build a community of like-minded individuals who appreciate the joys of cooking and sharing meals.</p>
+            </div>
+            <div class="abtimg">
+                <img src="images/WhatsApp Image 2024-06-20 at 14.42.18.jpeg">
+            </div>
         </div>
-<<<<<<< HEAD
-      </div>
     </section>
     <!-- Recipes section -->
     <section class="recipes">
-      <h1>Our Recipes</h1>
-      <div class="recipe-section">
-        <!-- Recipe Cards Placeholder -->
-      </div>
+        <h1>Our Recipes</h1>
+        <div class="recipe-section">
+            <!-- Recipe Cards Placeholder -->
+        </div>
     </section>
     <footer>
-      <div>
-        <p>&copy; 2024 YumShare</p>
-      </div>
-    </footer>
-=======
+        <div>
+            <p>&copy; 2024 YumShare</p>
         </div>
-        </section>
-        <footer>
-            <div>
-                <p>&copy; 2024 YumShare</p>
-            </div>
-        </footer>
-
->>>>>>> 0ff373b83d228b9810d87214b4888a8dc1ac0d04
+    </footer>
     <!-- Admin Page Modal -->
     <div id="admin-modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeAdminPage()">&times;</span>
-        <h2>Admin Login</h2>
-        <form class="frame" action="/login" method="post">
-          <div class="copy">
-            <label for="admin-username" class="subheading">Username:</label>
-            <input
-              type="text"
-              id="admin-username"
-              name="username"
-              placeholder="Username"
-              required
-              class="input-field"
-            />
+        <div class="modal-content">
+            <span class="close" onclick="closeAdminPage()">&times;</span>
+            <h2>Admin Login</h2>
+            <form class="frame" action="/login" method="post">
+                <div class="copy">
+                    <label for="admin-username" class="subheading">Username:</label>
+                    <input type="text" id="admin-username" name="username" placeholder="Username" required class="input-field">
 
-            <label for="admin-password" class="subheading">Password:</label>
-            <input
-              type="password"
-              id="admin-password"
-              name="password"
-              placeholder="Password"
-              required
-              class="input-field"
-            />
+                    <label for="admin-password" class="subheading">Password:</label>
+                    <input type="password" id="admin-password" name="password" placeholder="Password" required class="input-field">
 
-            <button type="submit" class="button3">
-              <span class="button3">Login</span>
-            </button>
-          </div>
-        </form>
-      </div>
+                    <button type="submit" class="button3"><span class="button3">Login</span></button>
+                </div>
+            </form>
+        </div>
     </div>
     <script>
-      // Function to open the admin modal
-      function openAdminPage() {
-        document.getElementById("admin-modal").style.display = "block";
-      }
-
-      // Function to close the admin modal
-      function closeAdminPage() {
-        document.getElementById("admin-modal").style.display = "none";
-      }
-
-      // Close the modal when clicking outside of it
-      window.onclick = function (event) {
-        const modal = document.getElementById("admin-modal");
-        if (event.target == modal) {
-          modal.style.display = "none";
+        // Function to open the admin modal
+        function openAdminPage() {
+            document.getElementById('admin-modal').style.display = 'block';
         }
-      };
+
+        // Function to close the admin modal
+        function closeAdminPage() {
+            document.getElementById('admin-modal').style.display = 'none';
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('admin-modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
     </script>
-  </body>
+</body>
 </html>
