@@ -31,7 +31,11 @@ const User = sequelize.define('admin_login', {
 const Recipe = sequelize.define('recipe', {
   title: { type: DataTypes.STRING(100), allowNull: false },
   ingredients: { type: DataTypes.TEXT, allowNull: false },
-  instructions: { type: DataTypes.TEXT, allowNull: false }
+  instructions: { type: DataTypes.TEXT, allowNull: false },
+  cuisine: { type: DataTypes.STRING(50), allowNull: false },
+  cookingt: { type: DataTypes.INTEGER, allowNull: false },
+  serving: { type: DataTypes.INTEGER, allowNull: false },
+  author: { type: DataTypes.STRING(50), allowNull: false }
 });
 
 // Sync the database
@@ -86,10 +90,10 @@ app.post('/login', async (req, res) => {
 
 // Add recipe route
 app.post('/addrecipe', async (req, res) => {
-  const { title, ingredients, instructions } = req.body;
+  const { title, ingredients, instructions, cuisine, cookingt, serving, author } = req.body;
 
   try {
-    await Recipe.create({ title, ingredients, instructions });
+    await Recipe.create({ title, ingredients, instructions, cuisine, cookingt, serving, author });
     res.redirect('/homepage.html');
   } catch (error) {
     console.error(error);
@@ -126,6 +130,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
 });
-
-
-
