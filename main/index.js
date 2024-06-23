@@ -47,18 +47,12 @@ app.use(
     secret: "secret-key",
     resave: false,
     saveUninitialized: true,
-  }),
+  })
 );
 
 // Sign-up route
 app.post("/signup", async (req, res) => {
-  const {
-    email,
-    username,
-    password,
-    "first-name": fname,
-    "last-name": lname,
-  } = req.body;
+  const { email, username, password, "first-name": fname, "last-name": lname } = req.body;
 
   if (!email || !username || !password || !fname || !lname) {
     return res.status(400).send("All fields are required");
@@ -98,15 +92,7 @@ app.post("/login", async (req, res) => {
 
 // Add recipe route
 app.post("/addrecipe", async (req, res) => {
-  const {
-    title,
-    ingredients,
-    instructions,
-    cuisine,
-    cookingt,
-    serving,
-    author,
-  } = req.body;
+  const { title, ingredients, instructions, cuisine, cookingt, serving, author } = req.body;
 
   try {
     await Recipe.create({
@@ -137,14 +123,14 @@ app.get("/homepage.html", async (req, res) => {
         <p>${recipe.ingredients}</p>
         <a href="#">View recipe</a>
       </div>
-    `,
+    `
       )
       .join("");
     const homepagePath = path.join(__dirname, "frontend", "homepage.html");
     const homepageHTML = await fs.promises.readFile(homepagePath, "utf8");
     const updatedHTML = homepageHTML.replace(
       "<!-- Recipe Cards Placeholder -->",
-      recipesHTML,
+      recipesHTML
     );
     res.send(updatedHTML);
   } catch (error) {
