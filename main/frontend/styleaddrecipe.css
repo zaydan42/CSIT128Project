@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Inter";
+}
+body {
+    width: 100%;
+    min-width: 100vh;
+    background: #f8f8f8;
+
+}
+header{
+    height: 60px;
+    width: 100%;
+    background: #000000;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Styles */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #4b4b4b;
+  }
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.sidebar-left,
+.sidebar-right {
+    display: none;
+}
+
+.content {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.landing-page-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.frame {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.recipe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.subheading {
+    margin: 10px 0 5px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.input-field {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: #575757;
+}
+
+.button-3 {
+    font-weight: 600;
+    color: #fff;
+}
+
+.logo{
+    width: 69px;
+    display:block;
+
+}
+
+footer{
+    background:#000000;
+    padding: 20px 0;
+    color:#fff;
+    text-align: center;
+}
