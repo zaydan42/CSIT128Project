@@ -1,75 +1,98 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Inter";
 }
 body {
-  width: 100%;
-  min-width: 100vh;
-  background: #f8f8f8;
+    width: 100%;
+    min-width: 100vh;
+    background: #f8f8f8;
+
 }
-header {
-  height: 60px;
-  width: 100%;
-  background: #000000;
-  color: white;
-  display: flex;
-  align-items: center;
+header{
+    height: 60px;
+    width: 100%;
+    background: #000000;
+    color: white;
+    display: flex;
+    align-items: center;
 }
 .container {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 /* Navigation Styles */
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #000000;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #4b4b4b;
+  }
+.welcome{
+    width: 100%;
+    height: auto;
+    background: url(images/360_F_332753934_tBacXEgxnVplFBRyKbCif49jh0Wz89ns.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 140px 0;
+    margin-bottom: 20px;
 }
 
-li {
-  float: left;
+.welcome h2{
+    font-size: 50px;
+    margin-bottom: 10px;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.welcome p{
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
-li a:hover {
-  background-color: #4b4b4b;
-}
-.welcome {
-  width: 100%;
-  height: auto;
-  background: url(images/360_F_332753934_tBacXEgxnVplFBRyKbCif49jh0Wz89ns.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  text-align: center;
-  padding: 140px 0;
-  margin-bottom: 20px;
+.search-box{
+    max-width: 550px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
 }
 
 .welcome h2 {
   font-size: 50px;
   margin-bottom: 10px;
+.welcome h2{
+    font-size: 50px;
+    margin-bottom: 10px;
 }
 
-.welcome p {
-  font-size: 15px;
-  margin-bottom: 10px;
+.welcome p{
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 .search-box {
@@ -79,6 +102,13 @@ li a:hover {
   align-items: center;
   justify-content: center;
   background: #ffffff;
+.search-box{
+    max-width: 550px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
 }
 
 .search-box input {
@@ -88,206 +118,216 @@ li a:hover {
   border: 0;
   border-radius: 5px 0 0 5px;
   font-size: 1rem;
+.search-box input{
+    width: 70%;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
 }
 
-.search-box button {
-  padding: 10px 20px;
-  border: 0;
-  outline: none;
-  background: #ffffff;
-  font-size: 1rem;
+.search-box button{
+    padding: 10px 20px;
+    border: 0;
+    outline: none;
+    background: #ffffff;
+    font-size: 1rem;
 }
 .search-box button:hover {
-  background-color: #c9c3c3;
-  color: white;
-}
+    background-color: #c9c3c3;
+    color: white;
+  }
 .items {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
-.About {
-  overflow: hidden;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+.About{
+    overflow: hidden;
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
 }
-.heading {
-  font-size: 40px;
-  width: 100%;
-  height: auto;
-  color: #000000;
-  text-align: center;
-  margin-top: 35px;
+.heading{
+    font-size: 40px;
+    width: 100%;
+    height: auto;
+    color: #000000;
+    text-align: center;
+    margin-top: 35px;
 }
-.container1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  margin: 65px auto;
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 65px auto;
+
+    }
+.heading-content{
+    flex:1;
+    width:600px;
+    margin:0px 25px;
+    font-family:'Inter';
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
 }
-.heading-content {
-  flex: 1;
-  width: 600px;
-  margin: 0px 25px;
-  font-family: "Inter";
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-.abtimg {
-  width: 600px;
-  height: auto;
-  border-radius: 10px;
-  flex: 1;
-  margin: auto;
+.abtimg{
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    flex:1;
+    margin:auto;
 }
 
-.abtimg img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+.abtimg img{
+    width:100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.heading-content p {
-  font-size: 24px;
-  line-height: 1.5;
-  margin-bottom: 40px;
-  width: 100%;
-  font-family: "Inter";
-  text-align: left;
+.heading-content p{
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    width: 100%;
+    font-family: "Inter";
+    text-align: left;
 }
-.logo {
-  width: 69px;
-  display: block;
+.logo{
+    width: 69px;
+    display:block;
+
 }
 
-.recipes {
-  padding: 50px 0;
+.recipes{
+    padding: 50px 0;
 }
 
-.recipes h1 {
-  font-size: 50px;
-  width: 100%;
-  height: auto;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 35px;
+.recipes h1{
+    font-size: 50px;
+    width: 100%;
+    height: auto;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 35px;
 }
 
-.recipe-section {
-  width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  column-gap: 10px;
+.recipe-section{
+    width:90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    column-gap: 10px;
 }
-.recipe-card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-  border-radius: 8px;
-  background-color: white;
-  margin: 30px 10px;
-  border: 1px solid #ccc;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.recipe-card{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 8px;
+    background-color: white;
+    margin: 30px 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.recipe-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.recipe-card img{
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+
 }
 
-.recipe-card h2 {
-  font-size: 22px;
-  padding: 20px;
+.recipe-card h2{
+    font-size: 22px;
+    padding: 20px;
 }
 
-.recipe-card p {
-  font-size: 20px;
-  padding: 20px;
+.recipe-card p{
+    font-size: 20px;
+    padding: 20px;
 }
 
-.recipe-card a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  background-color: #333;
-  color: #fff;
-  padding: 15px 0;
-  cursor: pointer;
+.recipe-card a{
+    display:block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding:15px 0;
+    cursor: pointer;
 }
-footer {
-  background: #000000;
-  padding: 20px 0;
-  color: #fff;
-  text-align: center;
+footer{
+    background:#000000;
+    padding: 20px 0;
+    color:#fff;
+    text-align: center;
 }
 
-.button3 {
-  background-color: #000000;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
+.button3{
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
 }
 .button3:hover {
-  background-color: #4b4b4b;
-}
+    background-color: #4b4b4b;
+  }
 
 /* Modal Styles */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto;
-  padding: 20px;
-  border: 1px solid #888888;
-  width: 80%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Form Styles */
 .input-field {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .input-field:focus {
-  border-color: #ff6f61;
-  outline: none;
+    border-color: #ff6f61;
+    outline: none;
 }
