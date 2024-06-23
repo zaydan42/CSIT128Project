@@ -1,25 +1,38 @@
-/* styling.css */
-
-/* Global Styles */
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+*{
+    margin:0;
     padding: 0;
+    box-sizing: border-box;
+    font-family:"Inter";
+}
+body {
+    width: 100%;
+    min-width: 100vh;
+    background: #f8f8f8;
+
+}
+header{
+    height: 60px;
+    width: 100%;
+    background: #000000;
+    color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.main-container {
-    width: 100%;
+.navigation {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Navigation Styles */
@@ -46,14 +59,27 @@ ul {
   li a:hover {
     background-color: #4b4b4b;
   }
-
 /* Form Container Styles */
 .form-container {
-    padding: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.sidebar-left,
+.sidebar-right {
+    display: none;
 }
 
 .signup-section {
-    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
 }
 
 .landing-page-title {
@@ -138,4 +164,17 @@ ul {
 .close:focus {
     color: black;
     text-decoration: none;
+}
+
+.logo{
+    width: 69px;
+    display:block;
+
+}
+
+footer{
+    background:#000000;
+    padding: 20px 0;
+    color:#fff;
+    text-align: center;
 }
