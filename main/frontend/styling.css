@@ -98,6 +98,10 @@ ul {
     background: #ffffff;
     font-size: 1rem;
 }
+.search-box button:hover {
+    background-color: #c9c3c3;
+    color: white;
+  }
 .items {
     display: flex;
     align-items: center;
@@ -189,6 +193,9 @@ ul {
     margin: 30px 10px;
     border: 1px solid #ccc;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .recipe-card img{
     width: 100%;
@@ -222,6 +229,19 @@ footer{
     color:#fff;
     text-align: center;
 }
+
+.button3{
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.button3:hover {
+    background-color: #4b4b4b;
+  }
 
 /* Modal Styles */
 .modal {
